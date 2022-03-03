@@ -9,5 +9,4 @@ import scrapy
 class JdItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    content = scrapy.Field() #评论
-
+    content = scrapy.Field()
