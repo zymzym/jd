@@ -45,15 +45,19 @@ DOWNLOAD_DELAY = 0.5
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-    'jd.middlewares.JdSpiderMiddleware': 543,
+  'jd.middlewares.JdSpiderMiddleware': 543,
 }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'jd.middlewares.JdDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'jd.middlewares.JdDownloaderMiddleware': 543,
+}
 
+'''DOWNLOADER_MIDDLEWARES = {#开启代理
+    'jd.middlewares.my_useragent':543,
+    #'jd.middlewares.JdDownloaderMiddleware': 543,
+}'''
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -62,9 +66,9 @@ SPIDER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'jd.pipelines.JdPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'jd.pipelines.JdPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

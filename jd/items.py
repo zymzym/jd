@@ -8,5 +8,10 @@ import scrapy
 
 class JdItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    #name = scrapy.Field()
+    nickname = scrapy.Field()
+    print(nickname)
     content = scrapy.Field()
+    print(content)
+    time = scrapy.Field()
+    score = scrapy.Field()
