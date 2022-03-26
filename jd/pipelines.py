@@ -26,10 +26,10 @@ class JdPipeline(object):
         cursor = dbObject.cursor()
         cursor.execute("USE mysql")
         #插入数据库
-        sql = "INSERT INTO jdd(用户名,评论,星级,评论时间) VALUES (%s,%s,%s,%s)"
+        sql = "INSERT INTO jd(comments,score,time) VALUES (%s,%s,%s)"
         try:
             cursor.execute(sql,
-                           (item['nickname'], item['content'], item['score'],item['time']))
+                           (item['content'], item['score'],item['time']))
             cursor.connection.commit()
         except BaseException as e:
             print("错误在这里>>>>>>>>>>>>>", e, "<<<<<<<<<<<<<错误在这里")
